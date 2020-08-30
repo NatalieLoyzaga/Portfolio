@@ -1,0 +1,51 @@
+.section-container {
+    margin-top: 2rem;
+   }
+
+/* =Introduction Section
+========================================================================================*/
+
+aside section.block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.block{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.block {
+  align-items: center;
+  text-align: center;
+  background-image: url(../../images\banner.jpg);
+}
+
+section.block2 {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all .7s linear;
+  &.left-to-right {
+		transform: translateX(-100%) translateY(-50%);
+		&.in-view {
+			transform: translateX(0) translateY(0);
+		}
+  }
+  &.right-to-left {
+		transform: translateX(100%);
+		&.in-view {
+			transform: translateX(0);
+		}
+	}
+}
+section.block3 {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

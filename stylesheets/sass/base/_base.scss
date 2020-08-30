@@ -1,0 +1,75 @@
+/* =Default tag styles
+========================================================================================*/
+
+body{
+    position: relative;
+    font-size: rem($font-size-base);
+    font-family: $font1;
+    color: $color-black;
+    min-width: 320px;
+    overflow-x: hidden;
+    @include media-breakpoint-down(lg) {
+        font-size: $root-max-font;
+    }
+
+}
+
+#content img:not(.unstyled), img.responsive_img {
+    max-width: 100%;
+    height: auto;
+}
+img.attachment-medium.size-medium.wp-post-image {
+    padding: 2.5rem 2.5rem 2.5rem 0;
+}
+
+a{
+    text-decoration: underline;
+}
+
+.link2{
+    text-decoration: underline;
+    color: $color2;
+    &:hover { color: $color1; }
+}
+
+
+/* =Layout styles
+========================================================================================*/
+#wrapper {
+    background: $wrapper-color;
+    position: relative;
+}
+
+.wrap {
+    max-width: $wrap-width;
+    margin: 0 auto;
+}
+
+.wrap-capped {
+    max-width: rem(800);
+    margin: 0 auto;
+}
+
+.wrap-p {
+    padding: $wrap-space;
+}
+
+.wrap-px {
+    padding-left: $wrap-space;
+    padding-right: $wrap-space;
+}
+
+.wrap-py {
+    padding-top: $wrap-space;
+    padding-bottom: $wrap-space;
+}
+
+.bg-color3 {
+    background-color: $bg-color3;
+}
+.bg-color2 {
+    background-color: $bg-color2;
+}
+.bg-color4 {
+    background-color: $bg-color4;
+}

@@ -1,0 +1,28 @@
+/* =Header
+========================================================================================*/
+.header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 33%;
+
+    z-index: 20000;
+    font-size: 1.2857142857rem;
+    background: #25407d;
+    position: fixed!important;
+    .header-row{
+        padding: 3.5714285714rem;
+    }
+}
+
+aside{
+    background: #25407d;
+    position: fixed!important;
+    height: 100vh;
+}
+
+main{
+    margin-right: 0;
+    margin-left: auto;
+}

@@ -1,0 +1,32 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+// Abstracts
+@import 'abstracts/functions';
+@import 'abstracts/variables';
+
+// Vendors 
+@import 'vendor/lightcase';
+
+// Base
+@import 'base/reset';
+@import 'base/base';
+
+// Layout
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/general'; 
+
+// Components
+@import 'components/buttons';
+@import 'components/typography';
+@import 'components/forms';
+
+//Sections
+@import 'sections/sections';
+
+
+
