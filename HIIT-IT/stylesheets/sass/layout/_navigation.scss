@@ -1,0 +1,57 @@
+/* =Navigation
+========================================================================================*/
+
+/* Navigation Line */
+.nav-bar {
+    position: fixed;
+    z-index: 99;
+    left: 155px;
+    right: 155px;
+    bottom: 4rem;
+}
+
+.nav-bar .nav-line {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    border-top: 2px solid  $color1;
+}
+.nav-bar ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar li {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    background: $color1;
+    border-radius: 50%;
+}
+
+.nav-bar li .nav-dot {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20px;
+    height: 20px;
+    background: $color1;
+    pointer-events: none;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+.nav-bar li .nav-text {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+    color: $color1;
+    pointer-events: none;
+    opacity: 1;
+    transition: 0.3s;
+}

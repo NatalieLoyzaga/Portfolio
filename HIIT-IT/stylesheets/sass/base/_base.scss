@@ -7,7 +7,6 @@ body{
     font-family: $font1;
     color: $color-black;
     min-width: 320px;
-    overflow-x: hidden;
     @include media-breakpoint-down(lg) {
         font-size: $root-max-font;
     }
@@ -24,6 +23,7 @@ img.attachment-medium.size-medium.wp-post-image {
 
 a{
     text-decoration: underline;
+    color: $color1!important;
 }
 
 .link2{
@@ -31,21 +31,7 @@ a{
     color: $color2;
     &:hover { color: $color1; }
 }
-em {
-    font-style: italic;
-}
-ol, ul { list-style: disc; 
-    &.indent li { margin-left: 3rem; margin-bottom: 1rem; }
-}
 
-.visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-.fixed {
-    position: fixed!important;
-}
 
 /* =Layout styles
 ========================================================================================*/
@@ -57,15 +43,6 @@ ol, ul { list-style: disc;
 .wrap {
     max-width: $wrap-width;
     margin: 0 auto;
-}
-
-.wrap-md{
-    @include media-breakpoint-down(xxl) {
-        max-width: 600px;
-    }
-    @include media-breakpoint-down(lg) {
-        max-width: 300px;
-    }
 }
 
 .wrap-capped {
@@ -85,14 +62,4 @@ ol, ul { list-style: disc;
 .wrap-py {
     padding-top: $wrap-space;
     padding-bottom: $wrap-space;
-}
-
-.bg-color3 {
-    background-color: $bg-color3;
-}
-.bg-color2 {
-    background-color: $bg-color2;
-}
-.bg-color4 {
-    background-color: $bg-color4;
 }

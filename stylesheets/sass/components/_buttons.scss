@@ -2,16 +2,20 @@
 ========================================================================================*/
 
 .btn {
-    padding: 1rem!important;
-    background-color: #F16344!important;
+    padding: 0.5rem!important;
+    background-color: #25407D!important;
     width: fit-content;
     border-radius: 30px;
     color: #fff!important;
     transition: transform 0.5s ease-in-out!important;
-    font-family: "Viga", sans-serif;
     font-weight: 400;
     line-height: 1.1;
     font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: 0;
+    display: flex!important;
 
     &:hover {
         background: $color-black!important;

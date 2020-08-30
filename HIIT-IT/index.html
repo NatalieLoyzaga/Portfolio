@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hit-Fit</title>
+    <link rel="stylesheet" href="stylesheets/css/reset.css">
+    <link rel="stylesheet" href="stylesheets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/vendor/mapper.js" type="text/javascript"></script>
+</head>
+<body>
+    <header class="header">
+        <section class="logo">
+            <a href=""><img src="images\logo.svg" alt="Logo"></a>
+        </section>        
+    </header>
+
+    <div>
+        <!--Side Nav Menu-->
+    </div>
+
+    <section class="nav-bar">
+        <section class="nav-line"></section>
+        <nav>
+            <ul>
+                <li>
+                    <section class="nav-dot" data-0="opacity: 1;" data-100p="opacity: 0;"></section>
+                    <section class="nav-text" data-0="opacity: 1;" data-100p="opacity: 0;">0</section>
+                </li>
+                <li>
+                    <section class="nav-dot" data-0="opacity: 0;" data-100p="opacity: 1;" data-200p="opacity: 0;"></section>
+                    <section class="nav-text" data-0="opacity: 0;" data-100p="opacity: 1;" data-200p="opacity: 0;">1</section>
+                </li>
+                <li>
+                    <section class="nav-dot" data-0="opacity: 0;" data-100p="opacity: 0;" data-200p="opacity: 1;" data-300p="opacity: 0;"></section>
+                    <section class="nav-text" data-0="opacity: 0;" data-100p="opacity: 0;" data-200p="opacity: 1;" data-300p="opacity: 0;">2</section>
+                </li>
+                <li>
+                    <section class="nav-dot" data-0="opacity: 0;" data-100p="opacity: 0;" data-200p="opacity: 0;" data-300p="opacity: 1;" data-400p="opacity: 0;" data-500p="opacity: 0;"></section>
+                    <section class="nav-text" data-0="opacity: 0;" data-100p="opacity: 0;" data-200p="opacity: 0;" data-300p="opacity: 1;" data-400p="opacity: 0;" data-500p="opacity: 0;">3</section>
+                </li>
+                <li>
+                    <section class="nav-dot" data-0="opacity: 0;" data-100p="opacity: 0;" data-200p="opacity: 0;" data-300p="opacity: 0;" data-400p="opacity: 1;"></section>
+                    <section class="nav-text" data-0="opacity: 0;" data-100p="opacity: 0;" data-200p="opacity: 0;" data-300p="opacity: 0;" data-400p="opacity: 1;">4</section>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <main class="wrapper" data-0="transform:translateX(0%)" data-400p="transform:translateX(-400%)">
+        <section class="slide" id="intro-section">
+        <!--Intro Section-->
+            <section class="container-fluid h-100 d-flex align-items-center row">
+                <section class="section-content col-4 offset-2">
+                    <h1>Customised High Intensity Workouts</h1>
+                    <h5 class="wrap-py">Select from various time intervals and body muscle groups to curate your ultimate workout session.</h5>
+                    <p class="btn btn1">Scroll To Start ></p>
+                </section>
+                <section class="section-image col-6">
+                    <img src="images\girl-skipping.png" alt="Skipping">
+                </section>
+            </section>
+        </section>
+        <section class="slide" id="step-one-section">
+        <!--Step One Section-->
+            <section class="container h-100 d-flex">
+                <section class="container">
+                    <h2>STEP ONE</h2>
+                    <section class="section-container d-flex align-items-center justify-content-space-evenly">
+                        <section class="workout-time w-50">
+                            <svg class="progress-ring" width="375" height="375">
+                            <circle class="progress-ring__circle" stroke="#F16344" stroke-width="12" stroke-linecap="round" fill="#fafafa" r="156" cx="180" cy="180"/>
+                            </svg>
+                            <button id="workout-time-up"><i class="arrow-large up"></i></button>
+                            <button id="workout-time-down"><i class="arrow-large down"></i></button>
+                            <input value="10" type="number" step="10" min="0" max="100" placeholder="progress">
+                            <section class="time">
+                                <h3><span class="time-total">15</span>:00</h3>
+                                <h4>TOTAL WORKOUT TIME</h4>
+                            </section><!--.time-->
+                        </section><!--.workout-time .w-50-->
+                        <section class="interval-time w-50 d-flex flex-column ml-5">
+                            <h4>Choose Interval Time:</h4>
+                            <section class="interval-content d-flex justify-content-between flex-row">
+                                <h3>Work:</h3>
+                                <section class="interval-work-time d-flex justify-content-center flex-column">
+                                    <button id="work-time-up"><i class="arrow-med up"></i></button>
+                                    <h3>00:<span class="total-work-time">30</span></h3>
+                                    <button id="work-time-down"><i class="arrow-med down"></i></button>
+                                </section><!--.interval-work-time-->
+                                <h3>Rest:</h3>
+                                <section class="interval-rest-time d-flex justify-content-center flex-column">
+                                    <button id="rest-time-up"><i class="arrow-med up"></i></button>
+                                    <h3>00:<span class="total-rest-time">30</span></h3>
+                                    <button id="rest-time-down"><i class="arrow-med down"></i></button>
+                                </section><!--.interval-rest-time-->
+                            </section><!--.interval-content-->
+                        </section><!--.interval-time-->
+                    </section><!--.section-container-->
+                </section><!--.container-->
+            </section><!--.container .h-100 .d-flex-->
+        </section> <!--.slide-->
+        <section class="slide" id="step-two-section">
+        <!--Step Two Section-->
+            <section class="container h-100 d-flex">
+                <section class="container">
+                    <h2>STEP TWO</h2>
+                    <div class="section-container d-flex align-items-center justify-content-space-evenly">
+                        <div class="row d-flex align-items-center justify-content-center">
+                            <!--Vendor Code Reference: https://musclecharts.net/-->
+                            <section class="col-6 map-section" style="position: relative; height: 331px; width: 373px; padding: 0px;">
+                                <map id="body_map" name="body_map">
+                                    <area target="" title="Hip adductors" class="noborder icolorffff7d" shape="POLYGON" coords="274, 173, 278, 178, 281, 179, 284, 179, 282, 188, 281, 197, 281, 205, 282, 214, 278, 199, 276, 194, 275, 190, 274, 184, 274, 179" rel="hip_adductors_3,hip_adductors_2,hip_adductors_1" id="hip_adductors_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0); hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Hip Adductors</span>
+                                    <area target="" title="Hip adductors" class="noborder icolorffff7d" shape="POLYGON"onClick="toggleMuscle(&quot;hip_adductors&quot;); return false;" coords="260, 180, 266, 177, 270, 173, 270, 181, 269, 186, 267, 193, 259, 214, 262, 195" rel="hip_adductors_3,hip_adductors_2,hip_adductors_0" id="hip_adductors_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0); hoverToolTip(this); null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Hip Adductors</span>
+                                    <area target="" title="Erector spinae" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;erector_spinae&quot;)" coords="284, 119, 285, 126, 285, 132, 260, 132, 259, 126, 260, 122, 261, 118, 264, 112, 266, 108, 279, 108" rel="" id="erector_spinae_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Erector spinae</span>
+                                    <area target="" title="Lats" class="noborder icolorffff7d" shape="POLYGON" coords="127, 78, 125, 86, 125, 95, 125, 106, 127, 100, 128, 93, 128, 82" rel="lats_1,lats_3,lats_2" id="lats_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Lats</span>
+                                    <area target="" title="Lats" class="noborder icolorffff7d" shape="POLYGON"  coords="73, 78, 76, 86, 76, 106, 74, 101, 73, 95" rel="lats_0,lats_3,lats_2" id="lats_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Lats</span>
+                                    <area target="" title="Lats" class="noborder icolorffff7d" shape="POLYGON" coords="303, 82, 302, 90, 301, 98, 297, 112, 294, 119, 288, 129, 283, 115, 275, 101, 277, 96, 279, 90, 284, 81, 288, 82, 292, 83, 300, 82, 302, 81" rel="lats_1,lats_0,lats_3" id="lats_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Lats</span>
+                                    <area target="" title="Lats" class="noborder icolorffff7d" shape="POLYGON" coords="242, 81, 246, 83, 250, 83, 255, 82, 260, 82, 266, 91, 270, 102, 266, 108, 262, 115, 257, 131, 251, 120, 248, 112, 246, 105, 243, 97, 243, 94, 242, 90" rel="lats_1,lats_0,lats_2" id="lats_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Lats</span>
+                                    <area target="" title="Teres" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;teres&quot;); return false;" coords="302, 66, 304, 67, 303, 81, 295, 83, 287, 81, 296, 75" rel="teres_1" id="teres_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Teres</span>
+                                    <area target="" title="Teres" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;teres&quot;); return false;" coords="242, 66, 241, 67, 242, 81, 245, 82, 249, 83, 258, 81, 247, 73, 245, 69" rel="teres_0" id="teres_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Teres</span>
+                                    <area target="" title="Infraspinatus" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;infraspinatus&quot;); return false;" coords="291, 60, 289, 61, 287, 65, 286, 72, 285, 79, 287, 81, 296, 75, 302, 65, 292, 60" rel="infraspinatus_1" id="infraspinatus_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Infraspinatus</span>
+                                    <area target="" title="Infraspinatus" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;infraspinatus&quot;); return false;" coords="253, 59, 255, 60, 257, 65, 258, 73, 260, 81, 258, 81, 247, 73, 245, 69, 242, 66" rel="infraspinatus_0" id="infraspinatus_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Trapezius</span>
+                                    <area target="" title="Trapezius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;trapezius&quot;); return false;" coords="110, 50, 115, 61, 120, 61, 122, 60, 115, 56" rel="trapezius_2,trapezius_1" id="trapezius_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Trapezius</span>
+                                    <area target="" title="Trapezius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;trapezius&quot;); return false;" coords="91, 51, 86, 61, 81, 61, 78, 60, 84, 56" rel="trapezius_2,trapezius_0" id="trapezius_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Trapezius</span>
+                                    <area target="" title="Trapezius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;trapezius&quot;); return false;" coords="266, 35, 279, 35, 280, 42, 282, 46, 294, 53, 298, 55, 303, 56, 300, 58, 291, 58, 288, 63, 287, 68, 285, 77, 283, 84, 278, 92, 275, 100, 272, 108, 266, 92, 260, 81, 257, 68, 256, 63, 254, 60, 252, 58, 242, 56, 247, 55, 260, 48, 264, 44" rel="trapezius_1,trapezius_0" id="trapezius_2" onmouseover="setAreaOver(this,'rb_canvas','255,5,25','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Back - Infraspinatus</span>
+                                    <area target="" title="Forearms" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;forearms&quot;)); return false;" coords="311, 112, 316, 117, 320, 116, 324, 106, 327, 110, 330, 116, 331, 119, 333, 125, 336, 136, 337, 140, 327, 145, 322, 138, 317, 129, 314, 122, 311, 116" rel="forearms_1,forearms_2,forearms_3" id="forearms_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Forearms</span>
+                                    <area target="" title="Forearms" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;forearms&quot;); return false;" coords="233, 112, 232, 116, 229, 123, 223, 135, 215, 146, 206, 142, 208, 135, 210, 128, 212, 119, 216, 111, 220, 105, 221, 110, 222, 116, 227, 118" rel="forearms_0,forearms_2,forearms_3" id="forearms_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Forearms</span>
+                                    <area target="" title="Forearms" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;forearms&quot;); return false;" coords="149, 107, 156, 117, 157, 122, 159, 129, 162, 136, 164, 141, 156, 146, 153, 142, 150, 138, 142, 127, 139, 120, 137, 116, 138, 115, 139, 114, 141, 114, 147, 118, 147, 113" rel="forearms_0,forearms_1,forearms_3" id="forearms_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Forearms</span>
+                                    <area target="" title="Forearms" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;forearms&quot;); return false;" coords="53, 107, 55, 114, 61, 112, 64, 116, 63, 120, 60, 125, 58, 128, 57, 132, 51, 139, 47, 145, 38, 141, 40, 137, 42, 132, 44, 125, 45, 120, 46, 116, 48, 113, 51, 109" rel="forearms_0,forearms_1,forearms_2" id="forearms_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Forearms</span>
+                                    <area target="" title="Biceps" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;biceps&quot;); return false;" coords="129, 78, 141, 88, 144, 92, 146, 99, 148, 106, 147, 113, 140, 112, 139, 107, 134, 100, 130, 88" rel="biceps_1" id="biceps_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Biceps</span>
+                                    <area target="" title="Biceps" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;biceps&quot;); return false;" coords="71, 78, 70, 92, 68, 99, 63, 107, 62, 109, 61, 112, 55, 113, 53, 107, 55, 101, 58, 89" rel="biceps_0" id="biceps_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Biceps</span>
+                                    <area target="" title="Triceps" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;triceps&quot;); return false;" coords="128, 86, 130, 88, 133, 99, 139, 107, 140, 110, 140, 112, 137, 109, 136, 112, 131, 102, 129, 98, 128, 92" rel="triceps_1,triceps_2,triceps_3" id="triceps_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Triceps</span>
+                                    <area target="" title="Triceps" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;triceps&quot;); return false;" coords="71, 88, 73, 86, 73, 95, 69, 104, 65, 111, 65, 110, 61, 112, 63, 107, 68, 99, 70, 93" rel="triceps_0,triceps_2,triceps_3" id="triceps_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Triceps</span>
+                                    <area target="" title="Triceps" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;triceps&quot;); return false;" coords="241, 73, 242, 88, 241, 94, 238, 100, 233, 112, 228, 113, 223, 111, 221, 105, 224, 96, 227, 85, 228, 84, 230, 82, 237, 75" rel="triceps_0,triceps_1,triceps_3" id="triceps_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Triceps</span>
+                                    <area target="" title="Triceps" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;triceps&quot;); return false;" coords="304, 73, 307, 74, 311, 79, 314, 82, 316, 84, 317, 86, 321, 98, 323, 105, 321, 112, 315, 113, 311, 111, 306, 100, 304, 96, 302, 90, 303, 73" rel="triceps_0,triceps_1,triceps_2" id="triceps_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Triceps</span>
+                                    <area target="" title="Posterior delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;posterior_delts&quot;); return false;" coords="291, 59, 304, 66, 305, 71, 307, 75, 315, 82, 315, 77, 314, 70, 312, 65, 310, 61, 306, 59, 301, 58, 294, 59, 292, 59" rel="posterior_delts_1" id="posterior_delts_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Posterior delts</span>
+                                    <area target="" title="Posterior delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;posterior_delts&quot;); return false;" coords="254, 59, 244, 58, 238, 59, 233, 63, 231, 68, 229, 73, 228, 84, 236, 77, 239, 72, 241, 66, 248, 62" rel="posterior_delts_0" id="posterior_delts_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Posterior delts</span>
+                                    <area target="" title="Lateral delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;lateral_delts&quot;); return false;" coords="300, 58, 303, 56, 309, 59, 313, 63, 315, 66, 316, 68, 317, 75, 317, 82, 317, 85, 316, 83, 314, 70, 312, 64, 307, 59" rel="lateral_delts_2,lateral_delts_3,lateral_delts_1" id="lateral_delts_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Lateral delts</span>
+                                    <area target="" title="Lateral delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;lateral_delts&quot;); return false;" coords="244, 58, 241, 56, 234, 60, 229, 66, 227, 74, 227, 85, 229, 79, 230, 70, 233, 63, 237, 59" rel="lateral_delts_2,lateral_delts_3,lateral_delts_0" id="lateral_delts_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Lateral delts</span>
+                                    <area target="" title="Lateral delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;lateral_delts&quot;); return false;" coords="123, 61, 125, 60, 130, 60, 134, 62, 139, 68, 141, 72, 142, 76, 142, 85, 142, 87, 139, 84, 138, 76, 137, 69, 134, 65, 131, 63" rel="lateral_delts_3,lateral_delts_0,lateral_delts_1" id="lateral_delts_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <area target="" title="Lateral delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;lateral_delts&quot;); return false;" coords="77, 61, 75, 59, 71, 60, 68, 61, 65, 64, 62, 67, 59, 72, 58, 77, 58, 82, 59, 86, 58, 89, 63, 84, 62, 74, 65, 67, 70, 63" rel="lateral_delts_2,lateral_delts_0,lateral_delts_1" id="lateral_delts_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Lateral delts</span>
+                                    <area target="" title="Anterior delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;anterior_delts&quot;); return false;" coords="116, 63, 121, 62, 127, 62, 131, 63, 134, 65, 136, 68, 138, 76, 139, 84, 131, 78, 130, 74, 128, 70, 122, 66" rel="anterior_delts_1" id="anterior_delts_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Anterior delts</span>
+                                    <area target="" title="Anterior delts" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;anterior_delts&quot;); return false;" coords="85, 63, 78, 61, 72, 61, 68, 64, 65, 67, 62, 73, 63, 84, 70, 79, 71, 74, 74, 69" rel="anterior_delts_0" id="anterior_delts_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Anterior delts</span>
+                                    <area target="" title="Abdominals" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;abdominals&quot;); return false;" coords="88, 93, 94, 92, 99, 91, 101, 91, 107, 92, 114, 92, 114, 100, 114, 108, 114, 116, 114, 123, 113, 127, 113, 131, 112, 137, 109, 149, 106, 160, 95, 160, 91, 147, 88, 135, 87, 131, 87, 127, 86, 121, 87, 117, 87, 107, 86, 104, 86, 99, 87, 95" rel="" id="abdominals_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">                                    <span class="tooltiptext">Abs - Abdominals</span>
+                                    <area target="" title="Obliques" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;obliques&quot;); return false;" coords="297, 112, 295, 119, 290, 127, 289, 131, 291, 134, 297, 135, 299, 137, 299, 129, 297, 122, 297, 116" rel="obliques_3,obliques_2,obliques_1" id="obliques_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Obliques</span>
+                                    <area target="" title="Obliques" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;obliques&quot;); return false;" coords="248, 112, 254, 126, 256, 130, 256, 132, 254, 133, 249, 135, 246, 137, 246, 128, 247, 124, 248, 118, 248, 113, 248, 112" rel="obliques_3,obliques_2,obliques_0" id="obliques_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Obliques</span>
+                                    <area target="" title="Obliques" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;obliques&quot;); return false;" coords="117, 95, 122, 99, 120, 101, 122, 102, 124, 104, 122, 107, 125, 108, 124, 120, 125, 128, 126, 137, 117, 146, 114, 142, 115, 129, 117, 125, 116, 123, 115, 121, 116, 118, 115, 113, 116, 109, 115, 106, 116, 103, 116, 101, 115, 99" rel="obliques_3,obliques_1,obliques_0" id="obliques_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Obliques</span>
+                                    <area target="" title="Obliques" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;obliques&quot;); return false;" coords="84, 95, 85, 99, 84, 103, 85, 107, 84, 110, 86, 112, 85, 114, 84, 118, 85, 123, 84, 124, 83, 125, 86, 129, 87, 141, 84, 146, 75, 137, 75, 133, 75, 127, 77, 119, 76, 108, 79, 107, 77, 104, 80, 101, 79, 100" rel="obliques_2,obliques_1,obliques_0" id="obliques_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Obliques</span>
+                                    <area target="" title="Serratus anterior" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;serratus_anterior&quot;); return false;" coords="84, 95, 79, 100, 80, 101, 78, 102, 77, 104, 79, 106, 76, 109, 76, 103, 76, 92, 76, 84, 79, 89, 85, 91, 83, 94" rel="serratus_anterior_1" id="serratus_anterior_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Arms - Serratus anterior</span>
+                                    <area target="" title="Serratus anterior" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;serratus_anterior&quot;); return false;" coords="125, 86, 125, 96, 125, 106, 125, 108, 123, 107, 122, 107, 124, 104, 122, 102, 120, 101, 122, 99, 119, 97, 117, 95, 118, 94, 116, 92, 121, 90" rel="serratus_anterior_0" id="serratus_anterior_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Chest - Serratus anterior</span>
+                                    <area target="" title="Pecs" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;pecs&quot;); return false;" coords="86, 63, 95, 64, 100, 74, 104, 64, 113, 63, 120, 66, 126, 70, 127, 74, 126, 81, 124, 87, 119, 90, 115, 92, 108, 91, 101, 90, 100, 88, 99, 88, 98, 91, 89, 92, 79, 89, 75, 83, 73, 74, 74, 70" rel="" id="pecs_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Chest - Pecs</span>
+                                    <area target="" title="Calves" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;calves&quot;); return false;" coords="292, 227, 294, 230, 297, 223, 303, 231, 304, 237, 307, 246, 309, 254, 309, 268, 307, 282, 304, 293, 297, 293, 295, 283, 291, 271, 288, 261, 288, 252, 288, 245, 287, 239" rel="calves_3,calves_2,calves_1,calves_5,calves_4" id="calves_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Calves</span>
+                                    <area target="" title="Calves" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;calves&quot;); return false;" coords="243, 223, 246, 229, 249, 226, 253, 239, 251, 245, 251, 260, 248, 270, 242, 281, 240, 293, 233, 293, 230, 277, 229, 264, 231, 251, 233, 243, 236, 235, 238, 230" rel="calves_3,calves_2,calves_0,calves_5,calves_4" id="calves_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Calves</span>
+
+                                    <area target="" title="Calves" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;calves&quot;); return false;" coords="70, 229, 67, 239, 65, 247, 65, 256, 66, 267, 67, 278, 67, 286, 71, 286, 70, 266, 69, 246, 71, 229" rel="calves_3,calves_1,calves_0,calves_5,calves_4" id="calves_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Calves</span>
+
+                                    <area target="" title="Calves" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;calves&quot;); return false;" coords="134, 229, 135, 230, 138, 237, 140, 243, 141, 247, 141, 252, 141, 258, 141, 267, 141, 284, 137, 285, 136, 264, 136, 246" rel="calves_2,calves_1,calves_0,calves_5,calves_4" id="calves_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Calves</span>
+                                    <area target="" title="Calves" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;calves&quot;); return false;" coords="120, 238, 124, 243, 126, 248, 128, 256, 131, 283, 127, 268, 123, 260, 121, 252" rel="calves_3,calves_2,calves_1,calves_0,calves_5" id="calves_4" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Calves</span>
+                                    <area target="" title="Calves" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;calves&quot;); return false;" coords="85, 237, 82, 242, 79, 249, 78, 257, 78, 268, 77, 281, 78, 274, 81, 267, 84, 259, 85, 252" rel="calves_3,calves_2,calves_1,calves_0,calves_4" id="calves_5" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Calves</span>
+                                    <area target="" title="Hamstrings" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;hamstrings&quot;); return false;" coords="285, 179, 295, 179, 297, 183, 298, 189, 302, 209, 302, 220, 303, 232, 298, 225, 295, 217, 291, 229, 287, 239, 285, 233, 284, 229, 284, 221, 281, 206, 282, 188" rel="hamstrings_1" id="hamstrings_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Hamstrings</span>
+                                    <area target="" title="Hamstrings" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;hamstrings&quot;); return false;" coords="249, 179, 254, 179, 259, 180, 261, 190, 261, 200, 259, 215, 257, 222, 256, 228, 255, 235, 253, 239, 249, 228, 246, 217, 242, 225, 238, 231, 240, 217, 240, 208, 246, 184, 247, 180" rel="hamstrings_0" id="hamstrings_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Hamstrings</span>
+                                    <area target="" title="Quads" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;quads&quot;); return false;" coords="301, 168, 303, 175, 304, 184, 302, 207, 300, 196, 299, 190, 298, 184" rel="quads_2,quads_3,quads_1" id="quads_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Quads</span>
+                                    <area target="" title="Quads" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;quads&quot;); return false;" coords="242, 167, 244, 177, 244, 180, 244, 183, 245, 186, 240, 206, 239, 191, 240, 175" rel="quads_2,quads_3,quads_0" id="quads_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Quads</span>
+                                    <area target="" title="Quads" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;quads&quot;); return false;" coords="123, 149, 119, 169, 115, 184, 112, 199, 112, 208, 113, 216, 115, 218, 117, 219, 119, 218, 120, 216, 120, 208, 126, 208, 127, 214, 130, 219, 132, 210, 133, 204, 134, 196, 133, 180, 132, 172, 130, 163" rel="quads_3,quads_0,quads_1" id="quads_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Quads</span>
+                                    <area target="" title="Quads" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;quads&quot;); return false;" coords="78, 148, 73, 159, 71, 167, 69, 174, 69, 187, 69, 196, 71, 207, 74, 219, 78, 212, 78, 208, 83, 208, 83, 214, 84, 216, 85, 218, 87, 218, 90, 217, 91, 210, 91, 199, 88, 188, 80, 161" rel="quads_2,quads_0,quads_1" id="quads_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Quads</span>
+                                    <area target="" title="Hip flexors" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;hip_flexors&quot;); return false;" coords="122, 142, 115, 166, 110, 155" rel="hip_flexors_1" id="hip_flexors_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Quads</span>
+                                    <area target="" title="Hip adductors" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;hip_adductors&quot;); return false;" coords="110, 155, 112, 161, 115, 167, 112, 175, 110, 184, 110, 194, 110, 203, 105, 189, 102, 180, 102, 169, 105, 168, 106, 166, 107, 163, 109, 158" rel="hip_adductors_3,hip_adductors_1,hip_adductors_0" id="hip_adductors_2" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0); hoverToolTip(this); null" onmouseout="setAreaOut(this,'rb_canvas',0,0);null">
+                                    <span class="tooltiptext">Glutes - Hip Adductors</span>
+                                    <area target="" title="Hip adductors" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;hip_adductors&quot;); return false;" coords="90, 155, 86, 166, 91, 181, 93, 192, 93, 204, 97, 191, 99, 179, 99, 170, 95, 167, 94, 165, 93, 163, 93, 160" rel="hip_adductors_2,hip_adductors_1,hip_adductors_0" id="hip_adductors_3" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0); hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);null">
+                                    <span class="tooltiptext">Glutes - Hip Adductors</span>
+                                    <area target="" title="Sartorius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;sartorius&quot;); return false;" coords="122, 142, 119, 152, 116, 164, 113, 173, 111, 182, 110, 188, 110, 194, 110, 204, 115, 225, 117, 230, 119, 235, 125, 242, 125, 236, 121, 230, 117, 223, 113, 213, 112, 208, 112, 202, 114, 190, 116, 179, 121, 160, 124, 141" rel="sartorius_1" id="sartorius_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Sartorius</span>
+                                    <area target="" title="Sartorius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;sartorius&quot;); return false;" coords="77, 141, 79, 142, 82, 155, 87, 168, 90, 178, 92, 187, 93, 204, 92, 213, 91, 218, 89, 226, 86, 234, 82, 241, 79, 245, 81, 236, 85, 230, 88, 223, 91, 215, 91, 209, 91, 202, 88, 187, 83, 171, 79, 156" rel="sartorius_0" id="sartorius_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Legs - Sartorius</span>
+                                    <area target="" title="Tensor fasciae latae" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;tensor_fasciae_latae&quot;); return false;" coords="126, 139, 124, 141, 124, 149, 129, 162, 132, 170, 133, 179, 133, 173, 132, 168, 131, 161, 130, 159, 130, 156, 128, 148" rel="tensor_fasciae_latae_1" id="tensor_fasciae_latae_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Tensor fasciae latae</span>
+                                    <area target="" title="Tensor fasciae latae" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;tensor_fasciae_latae&quot;); return false;" coords="75, 139, 77, 140, 76, 152, 73, 160, 70, 170, 69, 181, 68, 176, 69, 171, 71, 158" rel="tensor_fasciae_latae_0" id="tensor_fasciae_latae_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Tensor fasciae latae</span>
+                                    <area target="" title="Gluteus medius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;gluteus_medius&quot;); return false;" coords="282, 138, 288, 136, 294, 136, 296, 142, 298, 147, 298, 155, 296, 149, 292, 144" rel="gluteus_medius_1" id="gluteus_medius_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Gluteus medius</span>
+                                    <area target="" title="Gluteus medius" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;gluteus_medius&quot;); return false;" coords="263, 138, 258, 135, 255, 135, 251, 136, 247, 145, 246, 154, 249, 148, 254, 144" rel="gluteus_medius_0" id="gluteus_medius_1" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Gluteus medius</span>
+                                    <area target="" title="Gluteus maximus" class="noborder icolorffff7d" shape="POLYGON" onClick="toggleMuscle(&quot;gluteus_maximus&quot;); return false;" coords="263, 138, 257, 141, 252, 145, 249, 148, 248, 150, 245, 159, 246, 168, 249, 178, 260, 179, 265, 177, 269, 174, 271, 171, 272, 166, 274, 173, 279, 178, 285, 179, 292, 179, 296, 172, 299, 165, 299, 160, 298, 156, 297, 150, 295, 147, 292, 144, 282, 138, 276, 143, 272, 149, 269, 143, 267, 141" rel="" id="gluteus_maximus_0" onmouseover="setAreaOver(this,'rb_canvas','0,0,255','0,0,0','0.33',0,0,0);hoverToolTip(this);null" onmouseout="setAreaOut(this,'rb_canvas',0,0);hoverToolTip(this);null">
+                                    <span class="tooltiptext">Glutes - Gluteus maximus</span>
+
+                                </map>
+                                <img src="https://musclecharts.net/mc/eJzbY2hAHogHagQAhTMMLg==.png" id="rb_image" style="position: absolute; height: 331px; width: 373px; left: 0px; top: 0px;"><canvas id="rb_canvas" height="331" width="373" style="height: 331px; width: 373px; position: absolute; left: 0px; top: 0px; opacity: 1;"></canvas>
+                                <div id="body_map_blind" class="blind_area" style="position: absolute; height: 331px; width: 373px; left: 0px; top: 0px;"> </div>
+                                <img src="/mc/eJzbY2hAHogHagQAhTMMLg==.png" usemap="#body_map" class="" id="rb" style="position: absolute; height: 331px; width: 373px; left: 0px; top: 0px; opacity: 0;">
+
+                                <small>Charts provided by <a href="https://musclecharts.net/">MuscleCharts.net</a></small>
+                            </section>
+                            <section class="col-6 row d-flex flex-row flex-wrap justify-content-center">
+                                <input class="col-5 mb-3 mr-3" type="button" value="Shoulders" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3 mr-3" type="button" value="Chest" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3 mr-3"type="button" value="Arms" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3 mr-3" type="button" value="Back" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3 mr-3" type="button" value="Abs" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3 mr-3" type="button" value="Legs" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3 mr-3" type="button" value="Hips" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5 mb-3  mr-3" type="button" value="Glutes" onclick="setMuscleGroups(this, this.value)">
+                                <input class="col-5" type="button" value="Cardio" onclick="setMuscleGroups(this, this.value)">
+                            </section>
+                        </div><!--.row-->
+                    </div><!--.container .section-container-->
+                </section><!--.container-->
+            </section><!--.container .h-100 .d-flex-->
+        </section> <!--.slide-->
+        <section class="slide" id="step-three-section">
+        <!--Step Three Section-->
+            <section class="container h-100 d-flex">
+                <section class="container">
+                    <h2>STEP THREE</h2>
+                    <div class="section-container d-flex align-items-center justify-content-center">
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <section class="col d-flex flex-row flex-wrap justify-content-center equipment">
+                                <input class="col-3 mb-3 mr-3" type="button" value="None" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3" type="button" value="Dumbbells" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3"type="button" value="Barbells" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3" type="button" value="Skipping Rope" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3" type="button" value="Exercise Ball" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3" type="button" value="Resistance Bands" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3" type="button" value="Tredmill" onclick="setEquipment(this, this.value)">
+                                <input name="equipment" class="col-3 mb-3 mr-3" type="button" value="Eliptical" onclick="setEquipment(this, this.value)">
+                            </section>
+                            <input name="sumbit" class="btn btn1" type="button" value="Submit" onclick="generateExercises()">
+                        </div><!--.col-->
+                    </div><!--.container section-container-->
+                </section><!--.container-->
+            </section><!--.container .h-100 .d-flex-->
+        </section>
+        <section class="slide" id="step-four-section">
+        <!--Step Four Section-->
+            <section class="container h-100 d-flex">
+                <section class="container">
+                    <h2>STEP FOUR</h2>
+                    <div class="section-container d-flex align-items-center justify-content-space-evenly">
+                        <ul id="exercises" class="row">
+                        </ul>                    
+                        <input name="Refresh" class="btn btn1" type="button" value="Refresh" onclick="window.location.reload();">
+                    </div><!--.container section-container-->
+                </section><!--.container-->
+            </section><!--.container .h-100 .d-flex-->
+        </section>
+    </main><!--.outside-wrapper-->
+
+    <footer class="footer">
+
+    </footer>
+
+    <script src="js/main.js"></script>
+
+        <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/vendor/skrollr.min.js"></script>
+	<script type="text/javascript">
+    var s = skrollr.init();
+	</script>
+</body>
+</html>

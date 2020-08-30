@@ -1,0 +1,71 @@
+/* =Buttons
+========================================================================================*/
+
+.btn {
+    padding: 1rem!important;
+    background-color: #F16344!important;
+    width: fit-content;
+    border-radius: 30px;
+    color: #fff!important;
+    transition: transform 0.5s ease-in-out!important;
+    font-family: "Viga", sans-serif;
+    font-weight: 400;
+    line-height: 1.1;
+    font-size: 1.2rem;
+
+    &:hover {
+        background: $color-black!important;
+        transform: translateX(10px);
+    }
+}
+
+button#work-time-up , button#work-time-down, button#rest-time-up ,button#rest-time-down {
+    background-color: transparent!important;
+    color: transparent;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.arrow-large {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 15px;
+
+    @include media-breakpoint-down(md) {
+        padding: 8px;
+    }
+
+
+}
+.arrow-med {
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

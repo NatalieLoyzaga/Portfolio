@@ -6,23 +6,23 @@
     right: 0;
     top: 0;
     width: 33%;
-
     z-index: 20000;
     font-size: 1.2857142857rem;
     background: #25407d;
-    position: fixed!important;
+    @include media-breakpoint-down(sm) {
+    position: absolute;
+    width: 100%;
+    }
     .header-row{
-        padding: 3.5714285714rem;
+        padding-top: 3.5714285714rem;
+        padding-bottom: 3.5714285714rem;
+        padding-left: 1rem;
+        padding-right:1rem;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            padding-left: 4rem;
+            padding-right:4rem;
+        }
     }
 }
 
-aside{
-    background: #25407d;
-    position: fixed!important;
-    height: 100vh;
-}
-
-main{
-    margin-right: 0;
-    margin-left: auto;
-}

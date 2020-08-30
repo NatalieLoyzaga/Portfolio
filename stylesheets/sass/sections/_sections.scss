@@ -2,13 +2,31 @@
     margin-top: 2rem;
    }
 
-/* =Introduction Section
-========================================================================================*/
+  aside{
+    background: #25407d;
+    position: absolute!important;
+    height: 100vh;
+    @include media-breakpoint-down(sm) {
+      width: 100%!important;
+      max-width: 100%!important;
+      height: 50vh;
+      position: relative!important;
+    }
+}
+
+main{
+    margin-right: 0;
+    margin-left: auto;
+}
+
 
 aside section.block{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @include media-breakpoint-down(sm) {
+    height: 50vh;
+  }
 }
 
 section.block{
@@ -16,12 +34,14 @@ section.block{
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-section.block {
   align-items: center;
   text-align: center;
-  background-image: url(../../images\banner.jpg);
+
+  &.contact{
+    @include media-breakpoint-down(sm) {
+      height: 50vh;
+    }
+  }
 }
 
 section.block2 {
@@ -30,6 +50,8 @@ section.block2 {
   flex-direction: column;
   justify-content: center;
   transition: all .7s linear;
+  align-items: center;
+  text-align: center;
   &.left-to-right {
 		transform: translateX(-100%) translateY(-50%);
 		&.in-view {
@@ -48,4 +70,14 @@ section.block3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+section.block4 {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-down(lg) {
+    padding: 3rem;
+
+}
 }

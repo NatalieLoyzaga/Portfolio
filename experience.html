@@ -15,7 +15,7 @@
 </head>
 <body>
     <div id="wrapper">
-        <header class="header col-4">
+        <header class="header col-4 fixed">
             <section class="header-row">
             <section class="nav">
                 <nav>
@@ -30,53 +30,78 @@
             </section>
         </section>
         </header>
-        <aside class="col-4">
+        <aside class="col-4 h-100 fixed">
             <section class="block">
                 <section class="wrap-aside">
                     <h1 id="experience-heading"></h1>
                     <script src="js/text-type.js"></script>
                     <script>
-                      var experienceStr = "My Experience.";
-                      var experiencestrSplit = experienceStr.split("");
-                      var experienceh1 = document.querySelector('#experience-heading');
-                      typing(experiencestrSplit, experienceh1);
+                      var Str = "My Experience.";
+                      var strSplit = Str.split("");
+                      var h1 = document.querySelector('#experience-heading');
+                      typing(strSplit, h1);
                     </script>
                 </section>
             </section>
         </aside>
         <main class="col-8 pl-0">
 
-            <section class="block2 align-items-start">
-              <section class="wrap">
+            <section class="block4 align-items-start">
                 <h2>Education</h2>
-                <h3>University of Sydney - June 2020</h3>
-                <p>Bachelor of Science (Computer Science)</p>
-                <p>Having switched from a Bachelor of Medical Science degree after discovering a passion for problem solving and technology I was able to explore where technology can be used to user focused experiences. I particularly enjoyed: Human-Computer interaction, User Experience design, and interaction design.</p>
+                <section class="wrap-py">
+                  <h3>University of Sydney</h3>
+                  <p><em>Bachelor of Science (Computer Science), June 2020</em></p>
+                  <p>Having switched from a Bachelor of Medical Science degree after discovering a passion for problem solving and technology I was able to explore where technology can be used to user focused experiences. I particularly enjoyed: Human-Computer interaction, User Experience design, and interaction design.</p>
 
-                <h3>General Assembly - August 2020</h3>
-                <p>Front End Web Development</p>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus vel nesciunt, eum aperiam repellendus corporis? Eligendi inventore, fugit, ea amet, sint eveniet provident nisi aliquam minima exercitationem nesciunt ut maxime.</p>
+                  <h3>General Assembly</h3>
+                  <p><em>Front End Web Development, August 2020</em></p>
+                  <p>Honed my JavaScript, CSS and HTML skills through project based work. Created a fitness app HIIT-IT which was one of the few projects presented which demonstrated advanced JavaScript knowledge.</p>
               </section>
             </section>
-            <section class="block2 align-items-start bg-color4">
-              <section class="wrap">
+            <section class="block4 align-items-start bg-color4">
                 <h2>Projects & Activities</h2>
+                <section class="wrap-py">
                 <h3>HIIT-IT</h3>
-                <p>Java Script, Sass, CSS, Bootstrap, HTML</p>
-                <p>Description.. Designer, developer, tester, </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus ipsum maxime perferendis blanditiis dolorem, sed ipsa voluptate, fugit tenetur, quisquam quasi facere aut exercitationem nesciunt tempore ab natus explicabo expedita.</p>
+                <p><em>Java Script, Sass, CSS, Bootstrap, HTML</em></p>
+                <p>For my General Assembly project, I designed and developed a web-based fitness app which generates a workout to target  specific muscle groups and equipment over a duration chosen by the user.</p>
+                <p>My implementation involves:</p>
+                <ul class="indent">
+                  <li>Integration of Skrollr library for horizontal page scrolling.</li>
+                  <li>Design and Implementation of a scalable workout data structure which connected with various forms that took input from the user and generated a randomised but specific workout plan. </li>
+                  <li>Empowered the website with JS to programmatically create a HIIT style workout for the customer.</li>
+                </ul>
+                <a class="btn" target="_blank" href="http://loyzagat.no-ip.org:8888/HIIT-IT/">Check it out!</a>
 
                 <h3>The Happiness Project</h3>
-                <p>Using HTML and CSS I led the design work on a website around happiness, built the navigation templates for the rest of the group to insert their content into.</p>
+                <p><em>HTML and CSS</em></p>
+                <p>I led the design work on a website around “Happiness” - a health and wellbeing website. I built the navigation templates for general information display as well as interactive pages for  enquiries and  user registration.</p>
+                <a class="btn" href="">Check it out!</a>
 
                 <h3>The Recycling Project</h3>
-                <p>In a pair, I led the user research for the recycling project which aimed to inform the residents of Sydney about recycling best practices . This included, iterative prototyping in Figma, evaluating the design through heuristics analysis and conducting user interviews.</p>
-              </section>
+                <p><em>Figma</em></p>
+                <p>I conducted user research for The Recycling Project which aimed to inform the residents of Sydney about recycling best practices. This included iterative prototyping in Figma, evaluating the design through heuristics analysis and conducting user interviews.</p>
+                <a class="btn" href="">Check it out!</a>
+                </section>
             </section>
-            <section class="block2 align-items-start">
-              <section class="wrap">
+            <section class="block4 align-items-start">
+                <h2>Web Development Work Experience</h2>
+                <section class="wrap-py">   
+                  <h3>Jala Design, Bella Vista</h3>   
+                  <p>Junior Web Developer (March 2019  - Present)</p>
+                  <ul class="indent">
+                    <li>Developing new WordPress components and integrating it with PHP and Jala Design’s internal framework.</li>
+                    <li>Adapting templates using HTML, Bootstrap and SASS/CSS.</li>
+                    <li>Conducted on-going maintenance, quality assurance testing and prioritising bug fixes  on a variety of client websites.</li>
+                    <li>Design and present website sitemap and WordPress data structures to clients for their approval.</li>
+                    <li>Testing components on various browsers and devices.</li>
+                    <li>Customer liaison - conduct client meetings to ascertain customer needs and obtain clarity of the project specifications.</li>
+                  </ul>
+                </section>
+            </section>
+            <section class="block4 align-items-start bg-color4">
                 <h2>Technical Skills</h2>
-                <ul>
+                <section class="wrap-py">
+                <ul class="indent">
                   <li>HTML (intermediate)</li>
                   <li>CSS / SASS (intermediate)</li>
                   <li>Javascript (intermediate)</li>
@@ -84,7 +109,14 @@
                   <li>QA, Browser/Device testing </li>
                   <li>PHP for Wordpress</li>
                 </ul>
-              </section>
+                </section>
+            </section>
+            <section class="block4 align-items-start">
+                <h2>Other Work Experience</h2>
+                <section class="wrap-py">
+                  <p>Chatswood Golf Club - Barista/Bartender (September 2016 - January 2020)</p>   
+                  <p>Uniqlo - Retail Assistant (2016)</p>
+                </section>
             </section>
         </main><!--.outside-wrapper-->
 

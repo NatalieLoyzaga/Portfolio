@@ -1,0 +1,168 @@
+.section-container {
+    margin-top: 2rem;
+   }
+
+/* =Introduction Section
+========================================================================================*/
+
+#intro-section {
+    background: $bg-color2!important;
+}
+.wrapper {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  display: flex;
+}
+
+.section-content {
+    
+    @include media-breakpoint-down(sm) {
+      max-width:50%!important;
+    }
+
+}
+.section-image{
+    position: relative;
+    text-align: center;
+}
+
+.section-image img{
+    width: 400px;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+}
+
+.slide {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+    h2 {
+        margin-top: 200px;
+        color: $color1;
+    }
+  }
+
+/* =Step One Section
+========================================================================================*/
+
+#step-one-section {
+  background: $color-white!important;
+  .workout-time {
+    position: relative;
+
+    input {
+      display: none;
+    }
+
+    .time {
+      position: absolute;
+      left: 50px;
+      top: 140px;
+      text-align: center;
+
+      @include media-breakpoint-down(md) {
+        left: 96px;
+        top: 138px;
+
+        h4 {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    #workout-time-up i {
+      position: absolute;
+      left: 156px;
+      top: 83px;
+      @include media-breakpoint-down(md) {
+        left: 166px;
+      }
+    }
+
+    #workout-time-down i {
+      position: absolute;
+      left: 156px;
+      top: 231px;
+      @include media-breakpoint-down(md) {
+        left: 166px;
+      }
+    }
+  }
+}
+
+
+.interval-content {
+  margin-top:  6rem;
+  h3 {
+    @include media-breakpoint-down(md) {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+/* =Step Two Section
+========================================================================================*/
+
+#step-two-section {
+  background: $bg-color2!important;
+  .map-section{
+    small {
+      position: relative;
+      top: 400px;
+    }
+    map {
+      span {
+        &.tooltiptext{
+          visibility: hidden;
+          width: 150px;
+          background-color: black;
+          color: #fff;
+          text-align: center;
+          border-radius: 6px;
+          padding: 7px;
+          position: absolute;
+          z-index: 1;
+          top: 100%;
+          left: 18%;
+        }
+      }
+    }
+  }
+}
+
+/* =Step Three Section
+========================================================================================*/
+#step-three-section {
+  background: $color-white!important;
+
+  .equipment{
+    input {
+      width: 7rem;
+      height: 7rem;
+      font-family: "Viga", sans-serif;
+      font-weight: 400;
+      line-height: 1.1;
+      font-size: 1.2rem;
+      @include media-breakpoint-down(md) {
+        font-size: 0.8rem;
+        height: 5rem;
+      }
+    }
+  }
+}
+
+/* =Step Four Section
+========================================================================================*/
+
+#step-four-section {
+  background: $bg-color2!important;
+
+  .s_exer {
+    padding: 2rem 0rem 2rem 2rem;
+    border-bottom: 3px solid #F16344;
+    margin-right: 64px;
+  }
+}
